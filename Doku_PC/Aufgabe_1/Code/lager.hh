@@ -8,7 +8,6 @@
 #include <string>
 
 using namespace std;
-// Enumerationstyp für Maßeinheiten
 enum class Masseinheit { Stk, Kg, L };
 
 class Warengruppen {
@@ -20,11 +19,12 @@ private:
 
 public:
   Warengruppen();
-  ~Warengruppen();
-  void addMap();
+  //~Warengruppen();
+  void addMap(string filename);
   void addArtikel(string name, string nummer);
-  void rmArtikel(string name, string nummer);
-  void reset();
+  void rmArtikel(string nummer);
+  void resetMap();
+  void printMap();
 };
 
 class Artikel {
