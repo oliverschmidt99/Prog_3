@@ -1,10 +1,6 @@
 #include "lager.hh"
 
 int main(int argc, char *argv[]) {
-  Artikel x("a","1",100,Kg,100,100);
-  cout << x.getEinheit()<<endl;
-  
-  
   Warengruppen w;
 
   w.addMap(argv[2]);

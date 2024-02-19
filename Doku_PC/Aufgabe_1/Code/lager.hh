@@ -8,7 +8,7 @@
 #include <string>
 
 using namespace std;
-enum Masseinheit { Stk, Kg, L };
+enum class Masseinheit { Stk, Kg, L };
 
 class Warengruppen {
 private:
