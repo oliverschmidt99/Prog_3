@@ -10,11 +10,11 @@ build/main: $(OBJ1) $(OBJ2)
 
 build/%.o: %.cc
 	@mkdir -p build
-	${CXX} ${CFLAGS} -c $< -o $@
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 build/%.o: %.cpp
 	@mkdir -p build
-	${CXX} ${CFLAGS} -c $< -o $@
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 all: clean build/main 
 
@@ -22,4 +22,4 @@ clean:
 	rm -rf build
 
 run:
-	./build/main -i waren.txt -o $(shell date +'%d.%m.%Y').txt
+	./build/main

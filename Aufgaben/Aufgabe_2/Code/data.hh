@@ -1,17 +1,23 @@
-#ifndef DATA_H // include guard
+#ifndef DATA_H
 #define DATA_H
 
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <stdexcept>
+#include "lager.hh"
 #include <string>
 
-class get_Artikel {
-private:
-  void open_File();
+class Get_Artikel : public Artikel {
 protected:
+  std::string file_name;
+
 public:
+  Get_Artikel();
+  virtual ~Get_Artikel();
+  virtual void open_File();
+};
+
+class Output_Artikel : public Get_Artikel {
+public:
+  void open_File(const std::string file_name);
+  void write_file(const std::string &file_name, Artikel artikel_output);
 };
 
 #endif

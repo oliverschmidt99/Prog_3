@@ -1,8 +1,5 @@
 #include "lager.hh"
-#include <cmath>
-#include <fstream>
-#include <iostream>
-#include <sstream>
+
 
 Warengruppen::Warengruppen() {}
 
